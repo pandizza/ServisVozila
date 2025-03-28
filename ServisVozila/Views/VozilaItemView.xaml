@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="ServisVozila.Views.VozilaItemView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Border BorderBrush="Gray" BorderThickness="1" Padding="5" Margin="4">
+        <StackPanel>
+            <TextBlock Text="{Binding Naziv}" FontWeight="Bold"/>
+            <TextBlock Text="{Binding RegOznaka}" />
+            <TextBlock Text="{Binding GodProizvodnje}" />
+        </StackPanel>
+    </Border>
+</UserControl>

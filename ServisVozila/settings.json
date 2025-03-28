@@ -1,0 +1,3 @@
+{
+  "ConnectionStringTemplate": "Data Source=DESKTOP-T5HSU7E\\SQLEXPRESS; TrustServerCertificate=True; Initial Catalog=ServisVozila;User ID={0};Password={1}"
+}
