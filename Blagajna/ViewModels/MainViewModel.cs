@@ -25,6 +25,7 @@ namespace ServisVozila
         private ObservableCollection<RegistracijaVozila> registracije;
         private ObservableCollection<Materijal> materijal;
         private ObservableCollection<VrstaServisa> vrste_servisa;
+        private ObservableCollection<MaterijalSkladiste> materijal_skladiste;
 
         public MainViewModel(
             ObservableCollection<Vozila> vozila,
@@ -34,7 +35,8 @@ namespace ServisVozila
             ObservableCollection<AlarmiVozila> alarmi,
             ObservableCollection<RegistracijaVozila> registracije,
             ObservableCollection<Materijal> materijal, 
-            ObservableCollection<VrstaServisa> vrste_servisa)
+            ObservableCollection<VrstaServisa> vrste_servisa,
+            ObservableCollection<MaterijalSkladiste> materijal_skladiste)
         {
             this.vozila = vozila;
             this.kilometraza = kilometraza;
@@ -44,9 +46,10 @@ namespace ServisVozila
             this.registracije = registracije;
             this.materijal = materijal;
             this.vrste_servisa = vrste_servisa;
+            this.materijal_skladiste = materijal_skladiste;
 
             // Views with full data passed to ViewModel
-            var vozilaViewModel = new VozilaViewModel(vozila, kilometraza, vrsta_goriva, servisi, alarmi, registracije, materijal, vrste_servisa);
+            var vozilaViewModel = new VozilaViewModel(vozila, kilometraza, vrsta_goriva, servisi, alarmi, registracije, materijal, vrste_servisa, materijal_skladiste);
             var vozilaView = new VozilaView(vozilaViewModel);
             vozilaView.InitData(vozila, kilometraza, vrsta_goriva, servisi, alarmi, registracije, materijal, vrste_servisa);
 

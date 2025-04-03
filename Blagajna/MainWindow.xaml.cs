@@ -67,13 +67,14 @@ namespace ServisVozila
                             ObservableCollection<AlarmiVozila> alarmi, 
                             ObservableCollection<RegistracijaVozila> registracije, 
                             ObservableCollection<Materijal> materijal, 
-                            ObservableCollection<VrstaServisa> vrsta_servisa)
+                            ObservableCollection<VrstaServisa> vrsta_servisa,
+                            ObservableCollection<MaterijalSkladiste> materijal_skladiste)
         {
             InitializeComponent();
 
             InitClockTimer();
 
-            DataContext = new MainViewModel(vozila, kilometraza, vrsta_goriva, servisi, alarmi, registracije, materijal, vrsta_servisa );
+            DataContext = new MainViewModel(vozila, kilometraza, vrsta_goriva, servisi, alarmi, registracije, materijal, vrsta_servisa, materijal_skladiste );
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)

@@ -94,9 +94,9 @@ namespace ServisVozila
                 var registracije = await DataAccess.GetRegistracijaAsync();
                 var materijal = await DataAccess.GetMaterijalAsync();
                 var vrste_servisa = await DataAccess.GetVrsteServisaAsync();
-
+                var materijal_skladiste = await DataAccess.GetMaterijalSkladisteAsync();
                 // After loading, open MainWindow
-                MainWindow mainWindow = new MainWindow(vozila, kolimetraza, vrsta_goriva, servisi, alarmi, registracije, materijal, vrste_servisa);
+                MainWindow mainWindow = new MainWindow(vozila, kolimetraza, vrsta_goriva, servisi, alarmi, registracije, materijal, vrste_servisa, materijal_skladiste);
                 mainWindow.Show();
 
             this.Close();

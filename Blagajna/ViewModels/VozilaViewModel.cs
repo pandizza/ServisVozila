@@ -17,6 +17,7 @@ namespace ServisVozila
         private ObservableCollection<RegistracijaVozila> _registracije;
         private ObservableCollection<Materijal> _materijal;
         private ObservableCollection<VrstaServisa> _vrste_servisa;
+        private ObservableCollection<MaterijalSkladiste> _materijal_skaldiste;
 
 
         private ICollectionView _filteredVozilaView;
@@ -33,7 +34,8 @@ namespace ServisVozila
             ObservableCollection<AlarmiVozila> alarmi,
             ObservableCollection<RegistracijaVozila> registracije,
             ObservableCollection<Materijal> materijal,
-            ObservableCollection<VrstaServisa> vrste_servisa)
+            ObservableCollection<VrstaServisa> vrste_servisa, 
+            ObservableCollection<MaterijalSkladiste> materijal_skaldiste)
         {
             _vozila = vozila;
             _kilometraza = kilometraza;
@@ -43,6 +45,7 @@ namespace ServisVozila
             _registracije = registracije;
             _materijal = materijal;
             _vrste_servisa = vrste_servisa;
+            _materijal_skaldiste = materijal_skaldiste;
 
             _filteredVozilaView = CollectionViewSource.GetDefaultView(_vozila);
             _filteredVozilaView.Filter = FilterVozila;
