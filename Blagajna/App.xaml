@@ -1,0 +1,31 @@
+﻿<Application x:Class="ServisVozila.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ServisVozila.Converters"
+             StartupUri="/Views/LoginView.xaml"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:hc="clr-namespace:HandyControl.Themes;assembly=HandyControl">
+    
+    <Application.Resources>
+        <!-- Merging external ResourceDictionary -->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+                <ResourceDictionary Source="BlendStyles.xaml" />
+                <ui:ThemesDictionary Theme="Light" />
+                <ui:ControlsDictionary />
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--<local:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />-->
+            <!-- Define the ButtonSelectBrush -->
+            <SolidColorBrush x:Key="ButtonSelectBrush" Color="#FFB3E5FC" />
+            <!-- Example light blue -->
+
+            <!-- Define the DarkBrush -->
+            <SolidColorBrush x:Key="DarkBrush" Color="#FF0288D1" />
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

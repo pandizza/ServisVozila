@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="ServisVozila.Views.IstorijaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ServisVozila.Views"
+             mc:Ignorable="d" 
+             Background="Transparent"
+             >
+    <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Margin="15">
+        <!--<DataGrid x:Name="dgIstorija" Height="350" Width="250" GridLinesVisibility="None" Background="#181D28"/>-->
+        <TextBox Text="Istorija" FontSize="14"  Width="250" Height="350" Foreground="#DCE5E6" Background="#181D28" FontFamily="Lucida Console" Padding="7"/>
+    </Grid>
+
+</UserControl>
